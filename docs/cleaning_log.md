@@ -5,16 +5,16 @@
 | Step | Result |
 |---|---|
 | Duplicates removed | 412 |
-| Whitespace cells fixed | 2593 |
+| Whitespace cells fixed | 2624 |
 | Plan labels merged | 12 raw labels -> 4 canonical |
 | Numeric columns recovered | 9 |
-| Age outliers nulled | 29 |
-| Watch time outliers nulled | 24 |
+| Age outliers nulled | 30 |
+| Watch time outliers nulled | 25 |
 | Negative buffering nulled | 20 |
 | End before start nulled | 206 |
 | Future dated rows dropped | 124 |
-| Values recovered row level | 3741 |
-| Users consolidated | 7988 |
-| Cancelled users missing end date | 35 |
+| Values recovered row level | 3738 |
+| Users consolidated | 7993 |
+| Cancelled users missing end date | 36 |
 | Features engineered | 10 |
 | Tables exported | 6 |

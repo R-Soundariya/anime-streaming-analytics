@@ -434,13 +434,24 @@ def generate_events(rng: np.random.Generator, users: pd.DataFrame) -> pd.DataFra
     in_season2 = np.isin(m2, list(SEASON_LAUNCH_MONTHS))
     offset = np.where(~in_season1 & in_season2 & (rng.random(n) < 0.6), off2, off1)
 
-    # Weekend bias: shift ~30% of weekday events to the following Saturday.
+    # Weekend bias: shift ~30% of weekday events to the following Sat/Sun.
     abs_day = start_day + offset
     dow = (WINDOW_START.weekday() + abs_day) % 7  # Mon=0 .. Sun=6
-    shift = (5 - dow) % 7
+    target = rng.integers(5, 7, n)  # Saturday or Sunday
+    shift = (target - dow) % 7
     shifted = offset + shift
     move = (dow < 5) & (rng.random(n) < 0.30) & (shifted <= active_days - 1)
     offset = np.where(move, shifted, offset)
+
+    # Binge clustering: engaged users watch several episodes on the same day.
+    # Each event may adopt the previous same-user event's date; two passes let
+    # chains of 3+ episodes form.
+    same_user = np.zeros(n, dtype=bool)
+    same_user[1:] = idx[1:] == idx[:-1]
+    chain_p = 0.10 + 0.45 * ev["engagement"].to_numpy()
+    for _ in range(2):
+        chain = same_user & (rng.random(n) < chain_p)
+        offset = np.where(chain, np.roll(offset, 1), offset)
 
     hour = rng.choice(24, size=n, p=HOUR_WEIGHTS / HOUR_WEIGHTS.sum())
     minute = rng.integers(0, 60, n)
