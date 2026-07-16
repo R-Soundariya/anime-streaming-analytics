@@ -573,9 +573,11 @@ def inject_mess(rng: np.random.Generator, df: pd.DataFrame) -> tuple[pd.DataFram
     )
     report["end_before_start"] = len(i)
 
+    # Always push past the export date so the corruption is *detectable* —
+    # a shifted date that lands inside the window would be silently wrong.
     i = sample(MESS["future_watch_rate"])
-    df.loc[i, "Watch_Date"] = df.loc[i, "Watch_Date"] + pd.to_timedelta(
-        rng.integers(200, 600, len(i)), unit="D"
+    df.loc[i, "Watch_Date"] = WINDOW_END + pd.to_timedelta(
+        rng.integers(30, 400, len(i)), unit="D"
     )
     report["future_watch_dates"] = len(i)
 
