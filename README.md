@@ -145,9 +145,9 @@ The [`powerbi/`](powerbi/) folder is a complete build kit: run the model export,
 tests). Six pages: **Executive · Subscribers & Churn · Revenue · Behaviour · Content ·
 Recommendations.**
 
-<!-- After building in Power BI Desktop, export page screenshots here: -->
-<!-- ![Executive Overview](reports/figures/pbi_executive.png) -->
-<!-- ![Subscribers & Churn](reports/figures/pbi_subscribers.png) -->
+**📊 See the built report: [`reports/powerbi_dashboards.pdf`](reports/powerbi_dashboards.pdf)** — all four
+pages (Executive Summary · Subscriptions & Churn · Revenue & Monetization · Content & Behaviour)
+exported from the `.pbix`.
 
 ## Interview Q&A this project backs up
 
