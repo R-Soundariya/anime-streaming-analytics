@@ -9,6 +9,7 @@ __pycache__/
 data/raw/
 data/processed/
 database/*.db
+powerbi/model/
 
 # OS / editor noise
 .DS_Store
