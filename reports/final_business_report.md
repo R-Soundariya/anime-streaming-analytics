@@ -65,7 +65,7 @@ effects) and then deliberately degraded with controlled data-quality issues.
 
 | Property | Value |
 |---|---|
-| Raw export | `anime_streaming_raw.csv` — **41,582 rows × 40 columns**, one wide table |
+| Raw export | `anime_streaming_raw.csv` — **41,582 rows × 41 columns**, one wide table |
 | Grain | one watch event (user × episode × timestamp) |
 | Entities | 7,993 users · 64 titles · 12 genres · 4 subscription plans |
 | Window | 2023-01-19 → 2026-06-30 |
