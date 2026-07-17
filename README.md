@@ -4,6 +4,13 @@
 to governed KPIs, 31 answered business questions, a Power BI dashboard package, and an
 executive report — for a fictional anime streaming platform.*
 
+![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-2.x-150458?logo=pandas&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-window%20functions-003B57?logo=sqlite&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-DAX%20%C2%B7%204--page%20report-F2C811?logo=powerbi&logoColor=black)
+![Jupyter](https://img.shields.io/badge/Jupyter-5%20notebooks-F37626?logo=jupyter&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 **Stack:** Python (pandas, NumPy, matplotlib/seaborn) · SQL (SQLite, window functions) ·
 Power BI (star schema, DAX) · Jupyter
 
@@ -145,9 +152,16 @@ The [`powerbi/`](powerbi/) folder is a complete build kit: run the model export,
 tests). Six pages: **Executive · Subscribers & Churn · Revenue · Behaviour · Content ·
 Recommendations.**
 
-**📊 See the built report: [`reports/powerbi_dashboards.pdf`](reports/powerbi_dashboards.pdf)** — all four
-pages (Executive Summary · Subscriptions & Churn · Revenue & Monetization · Content & Behaviour)
-exported from the `.pbix`.
+**The built report** (📄 full PDF: [`reports/powerbi_dashboards.pdf`](reports/powerbi_dashboards.pdf)):
+
+<p align="center">
+  <img src="reports/figures/pbi_executive.png" width="49%" alt="Executive Summary page">
+  <img src="reports/figures/pbi_subscribers.png" width="49%" alt="Subscriptions & Churn page">
+</p>
+<p align="center">
+  <img src="reports/figures/pbi_revenue.png" width="49%" alt="Revenue & Monetization page">
+  <img src="reports/figures/pbi_content.png" width="49%" alt="Content & Behaviour page">
+</p>
 
 ## Interview Q&A this project backs up
 
