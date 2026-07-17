@@ -1,0 +1,28 @@
+KPI_ID,Pillar,KPI,Value,Unit,As_Of,Definition
+A1,Audience & Growth,Total Registered Users,7993.0,users,2026-06-30,COUNT(DISTINCT User_ID) in dim_user
+A2,Audience & Growth,Active Subscribers,3524.0,users,2026-06-30,Users with Subscription_Status = 'Active'
+A3,Audience & Growth,New Subscribers (Jun 2026),320.0,users,2026-06-30,Subscription starts in the last full month
+A4,Audience & Growth,MAU (Jun 2026),1527.0,users,2026-06-30,Distinct users with >=1 watch event in the month
+A5,Audience & Growth,Avg DAU (Jun 2026),58.4828,users,2026-06-30,"Daily distinct viewers, averaged across the month"
+A6,Audience & Growth,Stickiness DAU/MAU (Jun 2026),0.0383,ratio,2026-06-30,"Avg DAU divided by MAU, same month"
+B1,Revenue,MRR,22550.78,USD,2026-06-30,SUM(Monthly_Fee) over active subscribers
+B2,Revenue,Total Collected Revenue (lifetime),374693.93,USD,2026-06-30,SUM(Revenue) over all subscriptions
+B3,Revenue,ARPU (monthly),6.3992,USD,2026-06-30,MRR / active subscribers (Free included)
+B4,Revenue,ARPPU (monthly),9.3108,USD,2026-06-30,MRR / active paying subscribers
+B5,Revenue,Paid Conversion Rate,0.6003,pct,2026-06-30,Users ever on a paid plan / total registered users
+C1,Retention & Churn,Overall Churn Rate (lifetime),0.5591,pct,2026-06-30,Cancelled users / total registered users
+C2,Retention & Churn,Monthly Churn Rate (Jun 2026),0.0783,pct,2026-06-30,Cancellations in month / active at month start
+C3,Retention & Churn,Early Churn Share (<=3m),0.586,pct,2026-06-30,Churned with tenure <= 3 months / all churned
+C4,Retention & Churn,Avg Customer Lifetime,5.0069,months,2026-06-30,AVG(Membership_Tenure) over churned users
+C5,Retention & Churn,Loyal Share (12m+ active),0.1651,pct,2026-06-30,Retention_Status = 'Loyal (12m+ active)' / total users
+D1,Engagement,Total Watch Hours,9681.1183,hours,2026-06-30,SUM(Watch_Time_Minutes)/60 over all events
+D2,Engagement,Watch Hours per MAU (Jun 2026),0.3432,hours,2026-06-30,Monthly watch hours / MAU
+D3,Engagement,Avg Completion Rate,61.5223,pct100,2026-06-30,AVG(Completion_Percentage) over recorded events
+D4,Engagement,Completed Share (>=90%),0.0447,pct,2026-06-30,Events with completion >= 90% / all events
+D5,Engagement,Binge Rate,0.0647,pct,2026-06-30,User-days with >=3 episodes / all user-days
+D6,Engagement,Avg Engagement Score,50.0065,score,2026-06-30,AVG(Engagement_Score) from dim_user (0-100 composite)
+E1,Quality & Satisfaction,"CSAT (avg, 1-10)",7.0662,score,2026-06-30,"AVG(Customer_Satisfaction), 1-10 scale"
+E2,Quality & Satisfaction,Satisfied Share (CSAT >= 8),0.3556,pct,2026-06-30,Users scoring >= 8 / all users
+E3,Quality & Satisfaction,Avg Content Rating,7.7723,score,2026-06-30,AVG(User_Rating) over rated events (1-10)
+E4,Quality & Satisfaction,Avg Buffering per Event,8.9057,minutes,2026-06-30,AVG(Buffering_Time) per watch event
+E5,Quality & Satisfaction,Ad CTR (Free tier),0.0779,pct,2026-06-30,SUM(Ad_Clicked)/SUM(Ad_Shown)
