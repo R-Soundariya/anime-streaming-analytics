@@ -63,7 +63,7 @@ Engagement · Quality & Satisfaction.
 - **Watch out:** MRR is a *rate*, not cash collected; refunds, proration and annual plans (not modelled here) complicate it in real systems.
 
 ### 8. Total Collected Revenue (lifetime)
-- **Formula:** `SUM(Revenue)` in `fact_subscriptions` (= `Monthly_Fee × Membership_Tenure` per user)
+- **Formula:** `SUM(Revenue)` in `fact_subscriptions` (paid users: `Monthly_Fee × Membership_Tenure`; Free users: estimated ad revenue, ~$14.3k of the total)
 - **Business meaning:** Everything the platform has billed to date — the cumulative outcome of acquisition, pricing and retention combined.
 
 ### 9. ARPU — Average Revenue per User (monthly)
