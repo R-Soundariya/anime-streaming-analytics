@@ -4,13 +4,6 @@
 to governed KPIs, 31 answered business questions, a Power BI dashboard package, and an
 executive report — for a fictional anime streaming platform.*
 
-![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-2.x-150458?logo=pandas&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-window%20functions-003B57?logo=sqlite&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power%20BI-DAX%20%C2%B7%204--page%20report-F2C811?logo=powerbi&logoColor=black)
-![Jupyter](https://img.shields.io/badge/Jupyter-5%20notebooks-F37626?logo=jupyter&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
-
 **Stack:** Python (pandas, NumPy, matplotlib/seaborn) · SQL (SQLite, window functions) ·
 Power BI (star schema, DAX) · Jupyter
 
@@ -21,7 +14,7 @@ Power BI (star schema, DAX) · Jupyter
 | Query a warehouse | [`sql/`](sql/) — 45 annotated queries, GROUP BY → CTEs → window functions |
 | Define metrics people can trust | [`docs/kpi_definitions.md`](docs/kpi_definitions.md) — 25 KPIs, one formula each |
 | Answer real business questions | [`notebooks/05_business_questions.ipynb`](notebooks/05_business_questions.ipynb) — 31 × Analysis → Insight → Recommendation |
-| Build the BI layer | [`powerbi/`](powerbi/) — model export, DAX for every KPI, 6-page dashboard build guide |
+| Build the BI layer | [`powerbi/`](powerbi/) — model export, DAX for every KPI, dashboard build guide → 4-page report |
 | Tell leadership what to do | [`reports/final_business_report.md`](reports/final_business_report.md) |
 
 ---
@@ -79,7 +72,7 @@ flowchart LR
     D --> F["sql/ 45 queries<br/>03_sql_analysis.ipynb"]
     E --> G["powerbi/ KPI exports"]
     G --> H["export_powerbi_model.py<br/>8-table Power BI model"]
-    H --> I["6-page dashboard suite<br/>(build guide + DAX + theme)"]
+    H --> I["4-page dashboard report<br/>(build guide + DAX + theme)"]
     E --> J["reports/final_business_report.md"]
 ```
 
@@ -149,8 +142,8 @@ The [`powerbi/`](powerbi/) folder is a complete build kit: run the model export,
 [`measures.md`](powerbi/measures.md), and follow
 [`dashboard_build_guide.md`](powerbi/dashboard_build_guide.md) page by page
 (relationships diagram, slicers, bookmarks, drill-through, tooltip page, acceptance
-tests). Six pages: **Executive · Subscribers & Churn · Revenue · Behaviour · Content ·
-Recommendations.**
+tests). Four pages: **Executive Summary · Subscriptions & Churn · Revenue & Monetization ·
+Content & Behaviour.**
 
 **The built report** (📄 full PDF: [`reports/powerbi_dashboards.pdf`](reports/powerbi_dashboards.pdf)):
 
